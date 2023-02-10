@@ -24,6 +24,7 @@ div img {
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
 
 header {
@@ -36,7 +37,7 @@ header {
 
 header .list-items {
     display: flex;
-    max-width: 260px;
+    max-width: 280px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +84,7 @@ header .menu {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 50px    ;
+    padding-bottom: 50px;
 }
 
 #quem-somos h2 {
@@ -166,7 +167,7 @@ header .menu {
 
 #planos {
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 #planos h2 {
@@ -240,4 +241,84 @@ footer {
 footer .footer {
     justify-content: space-between;
     color: #fff;
+}
+
+/* mobile */
+@media(max-width: 992px){
+    header a {
+        margin: 0 10px;
+    }
+
+    header .flex-container {
+        flex-direction: row;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    h2 {
+        margin-left: 10px;
+    }
+
+    p {
+        margin-left: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao a {
+        margin-left: 10px;
+    }
+
+    .apresentacao .texto-apresentacao {
+        width: 100%;
+    }
+
+    #quem-somos {
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img {
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos {
+        flex-direction: column;
+    }
+
+    .item-servico img {
+        width: 30%;
+        margin: auto;
+    }
+
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-planos .item-plano {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    header .flex-container {
+        flex-direction: column;
+    }
 }
